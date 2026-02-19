@@ -60,6 +60,19 @@ You can follow same procedure in the official  AWS document [Getting started wit
    kubectl get nodes
    ```
 
+------ crictl----------
+VERSION="v1.29.0" && \
+curl -L https://github.com/kubernetes-sigs/cri-tools/releases/download/${VERSION}/crictl-${VERSION}-linux-amd64.tar.gz -o crictl.tar.gz && \
+sudo tar -C /usr/local/bin -xzf crictl.tar.gz && \
+rm -f crictl.tar.gz && \
+sudo tee /etc/crictl.yaml > /dev/null <<EOF
+runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+timeout: 10
+debug: false
+EOF
+---
+
 
 
 ------- Docker and Minikube install process-----
