@@ -75,7 +75,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/CloudTechDevOps/Kubernetes.git
+    repoURL: https://github.com/sasipreethamchandaka/Kubernetes.git
     targetRevision: HEAD
     path: day-14-argocd
   destination: 
@@ -142,14 +142,6 @@ Press enter or click to view image in full size
 
 Changes in cluster
 
-As you can see, now we have a total of 4 pods in the cluster.
-ubuntu@ip-172-31-7-106:~$ kubectl get pods -n myapp
-NAME                                READY   STATUS    RESTARTS   AGE
-myapp-deployment-544dd58bc4-4sntz   1/1     Running   0          13h
-myapp-deployment-544dd58bc4-wkf5j   1/1     Running   0          13h
-myapp-deployment-544dd58bc4-xt7hb   1/1     Running   0          13h
-myapp-deployment-544dd58bc4-zjmn8   1/1     Running   0          13h
-ubuntu@ip-172-31-7-106:~$
-Now you can perform different changes as per your need and argoCD will take care of the further action.
+
 
 reference :- **https://medium.com/@veerababu.narni232/a-complete-overview-of-argocd-with-a-practical-example-f4a9a8488cf9**
